@@ -1,6 +1,9 @@
 /*
 a square shape that you can texture
 TODO: add billboarding (make optional?)
+
+Note: currently unused. wish: make this a particle for 
+emitter support
 */
 
 class TexturedQuad

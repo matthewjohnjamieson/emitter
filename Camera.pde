@@ -13,9 +13,8 @@ class Camera
   Movement lookat;
   float fov = PI/2.0;
   float aspect = float(width)/float(height);
-  float nearplanescale = 0.1;
-  float farplanescale = 100.0;
-  float farplane = 32000.0;
+  float nearplane = 10.0; //closest the cam can see
+  float farplane = 32000.0; //farthest distance cam can see (needs to be twice the skybox radius) 
   
   Camera()
   {
@@ -35,7 +34,7 @@ class Camera
   Camera display()
   {
     perspective(this.fov, this.aspect,
-      10.0,//mov.pos.z*this.nearplanescale,
+      this.nearplane,
       this.farplane);
     camera(
       mov.pos.x + width/2.0,

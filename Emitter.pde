@@ -1,7 +1,13 @@
+/*
+Particle emitter class.
+
+currently more accurate to call it BoxEmitter, since it only 
+supports emitting instances of the Box class. Soon: fix that.  
+*/
 class Emitter
 {
   Movement mov = new Movement();
-  Stopwatch sw = new Stopwatch(); //set a delay between emits
+  Stopwatch sw = new Stopwatch(); //emittion delay timer
   ArrayList<Box> boxes = new ArrayList<Box>();
 
   Emitter()
@@ -11,7 +17,7 @@ class Emitter
  
   Emitter(float delay)
   {
-    sw.set(delay); //delay
+    sw.set(delay); //delay between emits
   }
  
   //default emit. random direction and rotation 

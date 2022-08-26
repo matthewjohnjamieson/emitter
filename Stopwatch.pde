@@ -1,3 +1,6 @@
+/*
+General timer object. Movement depends on this for timed acc
+*/
 class Stopwatch
 {
   float t = 0.0; //current time

@@ -10,7 +10,7 @@ class Sky
   Sky(String texture)
   {
     this.tex = loadImage(texture);
-    this.model = createShape(SPHERE, 16000);
+    this.model = createShape(SPHERE, 16000); // <--should make size an argument
     this.model.setStroke(false); //nostroke for PShapes
     this.model.setTexture(this.tex);
   }

@@ -1,3 +1,6 @@
+/*
+just a basic box that can be emitted as a particle
+*/
 class Box
 {
   Movement mov;
@@ -7,7 +10,7 @@ class Box
   
   Box()
   {
-    scale = random(200.0,400.0);
+    scale = random(200.0, 400.0); //should make this an arg at some point
     this.mov = new Movement(); 
     this.rot = new Movement();
   }
@@ -23,7 +26,6 @@ class Box
   {
     noStroke();
     pushMatrix();
-    //translate(width/2, height/2); //draw from origin
     translate(this.mov.pos.x, this.mov.pos.y, this.mov.pos.z); //where to draw. keep these in display 
     rotateX(this.rot.pos.x);                                   //why? because no variables being changed
     rotateY(this.rot.pos.y);
